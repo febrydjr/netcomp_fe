@@ -79,9 +79,24 @@ function FormLogin() {
   };
   const modalAttr = { isOpen, onClose };
 
+  const infoAttr = {
+    color: "red",
+    fontSize: "13px",
+  };
+
   return (
     <>
       <form onSubmit={formik.handleSubmit}>
+        <Text {...infoAttr}>Login Role</Text>
+        <Text {...infoAttr}>
+          User: username = user / password = Password12!
+        </Text>
+        <Text {...infoAttr}>
+          Admin: username = admin / password = Password12!
+        </Text>
+        <Text {...infoAttr} mb={3}>
+          Admin Warehouse: username = admin_warehouse / password = Password12!
+        </Text>
         <Flex {...container}>
           <InputTextCustom {...identifierAttr} />
           <InputTextCustom {...passwordAttr} />
